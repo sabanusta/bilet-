@@ -1,0 +1,60 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    int km,yas;
+    int yolculuktipi;
+    double toplamfiyat;
+
+  Scanner scan1 =new Scanner (System.in);
+  System.out.println("Km nizi giriniz:");
+   km=scan1.nextInt();
+
+  Scanner scan2 =new Scanner (System.in);
+  System.out.println("yas giriniz:");
+   yas=scan2.nextInt();  
+
+  Scanner scan3 =new Scanner (System.in);
+  System.out.println("Yolculuk Tipinizi girinizTek Yön(1) Gidiş Dönüş(2) giriniz:");
+  
+  yolculuktipi=scan3.nextInt();  
+    
+  toplamfiyat=(km*0.1);
+  
+//Kişi 12 yaşından küçükse bilet fiyatı üzerinden %50 indirim uygulanır.
+//Kişi 12-24 yaşları arasında ise bilet fiyatı üzerinden %10 indirim uygulanır.
+//Kişi 65 yaşından büyük ise bilet fiyatı üzerinden %30 indirim uygulanır.
+//Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %20 indirim uygulanır.
+
+if (yas<12){
+  toplamfiyat=(toplamfiyat*0.5);
+  System.out.println(toplamfiyat);
+  
+}
+   else if    (yas>12 && yas<24){
+     toplamfiyat=(toplamfiyat*0.9);
+    System.out.println(toplamfiyat) ; 
+   }
+    
+    
+
+
+    
+    
+    
+ else if (yas>65)  {
+   toplamfiyat=(toplamfiyat*0.7);
+    System.out.println(toplamfiyat) ;
+ }
+    
+
+  else if (yolculuktipi==2)  {
+    toplamfiyat=(toplamfiyat*0.8);
+    System.out.println(toplamfiyat) ;
+  }
+    
+    
+      
+
+    
+  }
+}
